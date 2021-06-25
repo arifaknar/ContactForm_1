@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    
+}
+
+html{
+    font-size: 10px;
+   
+   
+}
+
+section{
+    display: flex;
+    justify-content: center; /*Yatay olarak ortaya hizaladık. */
+    align-items: center;    /*Dikey olarak ortaya hizaladık. */
+    height: 100vh;
+    width: 100%;
+    padding: 2rem auto;
+    background: url(../images/pexels-artem-podrez-6779601.jpg);
+    background-size: cover;
+    background-position: center;
+    color: rgba(56, 11, 46, 0.877);
+    position: relative;
+    overflow: hidden;
+
+}
+
+section::before{
+    position:absolute;
+    content: "";
+    background: linear-gradient(#ffeb3b,#e91e63);
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    transform: translate(-42rem,-18rem);
+}
+
+section::after{
+    position:absolute;
+    content: "";
+    background: linear-gradient(#2196f3,#83d8ff);
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    transform: translate(40rem,18rem);
+}
+
+.container{
+    position: relative;
+    display: flex;
+    
+    
+    flex-wrap: wrap;
+    z-index: 1000;
+    width: 100%;
+    max-width: 100rem;
+    padding: 5rem auto;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2.5rem 4.5rem rgba(0,0,0, 0.1);
+    border:1px solid rgba(255, 255, 255, 0.5);
+    border-right:1px solid rgba(255, 255, 255, 0.1);
+    border-bottom:1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.container::before{
+    position: absolute;
+    content: "";
+    top:0;
+    left: -38.5rem;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    transform: skewX(-15deg);
+}
+
+.container h1{
+    width: 100%;
+    text-align: center;
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+    z-index: 1001;
+
+}
+
+.container .row100{
+    position: relative;
+    width: 50%;
+    
+    
+}
+
+.container .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 1rem;
+    margin: 3rem 0 2rem;
+}
+
+
+
+
+.inputBox{
+   position: relative;
+   width: 100%; 
+   height: 4rem;
+   font-size: 1.5rem;
+   color: #000;
+}
+
+
+
+
+
+.inputBox input,.inputBox textarea{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: transparent;
+   box-shadow: none;
+   border: none;
+   outline: none;
+   font-size: 1.5rem;
+   padding: 0 1rem;
+   z-index: 1;
+ 
+   
+   
+}
+
+
+
+.inputBoxItem .text{
+    
+    display: block;
+    top: 0;
+    left: 0;
+    line-height: 4rem;
+    font-size: 1.8rem;
+    padding: 0 1rem;
+    pointer-events: none;
+    
+    
+    
+    
+}
+
+.inputBoxItem input:focus+.text,
+.inputBoxItem input:valid+.text,
+textarea:focus +.text,
+textarea:valid +.text{
+    position: absolute;
+    top: -3.5rem;
+    left: -1rem;
+    background-color: transparent;
+    transition: all 0.5s;
+   
+}
+
+
+
+.inputBoxItem .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+
+
+
+.inputBoxItem input:focus ~ .line,
+.inputBoxItem input:valid ~ .line,
+.inputBoxItem textarea:focus ~ .line,
+.inputBoxItem textarea:valid ~ .line{
+    
+    height: 100%;
+    transition: .5s;
+}
+
+.inputBox .textarea{
+   
+    width: 100%;
+    height: 100%;
+    padding: 1rem auto;
+}
+
+.inputBox #submitbtn{
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    background: #4d3426;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+   
+}
