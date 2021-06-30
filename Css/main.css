@@ -53,8 +53,6 @@ section::after{
 .container{
     position: relative;
     display: flex;
-    
-    
     flex-wrap: wrap;
     z-index: 1000;
     width: 100%;
@@ -187,8 +185,8 @@ section::after{
 .inputBoxItem textarea:focus ~ .line,
 .inputBoxItem textarea:valid ~ .line{
     
-    height: 100%;
-    transition: .5s;
+    height: 100% !Important;
+    transition: .5s !Important;
 }
 
 .inputBox .textarea{
